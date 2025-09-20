@@ -13,6 +13,6 @@ const gitignorePath = path.resolve(__dirname, ".gitignore")
 export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.recommended,
-  includeIgnoreFile(gitignorePath),
-  prettierConfig
+  prettierConfig,
+  includeIgnoreFile(gitignorePath, "bun.lock")
 )
